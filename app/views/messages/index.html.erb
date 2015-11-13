@@ -11,17 +11,25 @@
   </div>
 </div>
 
-<%= form_for(Message.new) do |f| %>
+
+  <%= form_for(Message.new) do |f| %>
+
   <div class="form-group">
-  名前：
-  <%= f.text_field :name %>
+    <label class="control-label">名前：</label>
+    <div>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
   </div>
   <div class="form-group">
-  内容：
-  <%= f.text_area :body, class: "form-control", rows: "3" %>
+    <label class="control-label">内容：</label>
+    <div>
+      <%= f.text_area :body, class: "form-control", rows: "3" %>
+    </div>
   </div>
   <div class="form-group">
-  <%= f.submit class: "btn btn-sm btn-primary" %>
+    <div>
+    <%= f.submit class: "btn btn-sm btn-primary" %>
+    </div>
   </div>
 
-<% end %>
+  <% end %>
