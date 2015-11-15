@@ -13,7 +13,32 @@
   </div>
 </div>
 
+<<<<<<< HEAD
 <% #部分テンプレートを読み込んでいる %>
 <%= render 'form' %>
 
 
+=======
+
+  <%= form_for(Message.new, html: {class: "form-horizontal"}) do |f| %>
+
+  <div class="form-group">
+    <label class="control-label cos-sm-2">名前：</label>
+    <div class="cos-sm-8">
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label cos-sm-2">内容：</label>
+    <div class="cos-sm-8">
+      <%= f.text_area :body, class: "form-control", rows: "3" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-2">
+    <%= f.submit class: "btn btn-sm btn-primary" %>
+    </div>
+  </div>
+
+  <% end %>
+>>>>>>> challenge1
